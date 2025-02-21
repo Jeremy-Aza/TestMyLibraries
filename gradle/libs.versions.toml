@@ -11,7 +11,7 @@ composeBom = "2024.04.01"
 fragmentKtx = "1.6.2"
 constraintlayout = "2.2.0"
 appcompat = "1.7.0"
-comInnovatricsDot = "8.6.1"
+comLibrarySDK = "1.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,7 +31,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
 androidx-constraint = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-com-innovatrics-dot-document = { group = "com.innovatrics.dot", name = "dot-document", version.ref = "comInnovatricsDot" }
+lib-sdk = { group = "com.github.Suma-Mexico", name = "LibrarySDK", version.ref = "comLibrarySDK" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
