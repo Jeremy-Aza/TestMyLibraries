@@ -19,12 +19,34 @@ class MainActivity : AppCompatActivity(), OnProcessListener {
 
         supportFragmentManager.commit {
             replace(
-                R.id.fragmentContainer,
-                myFragment
+                R.id.fragmentContainer, myFragment
             )
         }
 
+        //Prueba SDK
+        val buttonTestSdk: Button = this.findViewById(R.id.btnTestSdk)
+        buttonTestSdk.setOnClickListener {
+            val getId = ContentLibrary.getApplicationId(this)
+            Toast.makeText(this, getId, Toast.LENGTH_SHORT).show()
+        }
 
+        // Stop process (async)
+        val buttonStop: Button = this.findViewById(R.id.btnStop)
+        buttonStop.setOnClickListener {
+            ContentLibrary.stopDetection { message ->
+                Toast.makeText(
+                    this, message, Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
+
+        //Liberar recursos (hay que tener cuidado con esta función porque puede romper el proceso si esta capturando la imagen)
+        val buttonRelease: Button = this.findViewById(R.id.btnRelease)
+        buttonRelease.setOnClickListener {
+            ContentLibrary.releaseResources()
+        }
+
+        // Continue Detection
         val button: Button = this.findViewById(R.id.btnShowMessage)
         button.setOnClickListener {
             ContentLibrary.continueDetection()
@@ -37,8 +59,10 @@ class MainActivity : AppCompatActivity(), OnProcessListener {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    override fun onDocumentCaptured(image: String) {
-        println("####################Get image $image")
+    override fun onDocumentCaptured(image: ByteArray) {
+        println("#####ByteArray $image")
+        val img = ContentLibrary.imageToBase64(image)
+        println("#####Get image $img")
     }
 
 

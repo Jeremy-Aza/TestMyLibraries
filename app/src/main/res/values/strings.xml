@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TestMyLibraries</string>
     <string name="continue_detection">Continuar la detección</string>
+    <string name="detener_detection">Detener la detección</string>
+    <string name="release_detection">Liberar recursos</string>
+    <string name="prueba_title">Prueba SDK</string>
 </resources>
