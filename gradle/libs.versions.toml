@@ -12,6 +12,7 @@ fragmentKtx = "1.6.2"
 constraintlayout = "2.2.0"
 appcompat = "1.7.0"
 comLibrarySDK = "2.0.3"
+comSumaVdidDocument = "0.0.1-beta"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +33,7 @@ fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref
 androidx-constraint = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 lib-sdk = { group = "com.github.Suma-Mexico", name = "LibrarySDK", version.ref = "comLibrarySDK" }
+lib-suma-document = { group = "com.sumamexico", name = "vdid_document", version.ref = "comSumaVdidDocument" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

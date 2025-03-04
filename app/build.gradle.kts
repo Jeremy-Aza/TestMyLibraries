@@ -59,7 +59,8 @@ dependencies {
     implementation(libs.fragment.ktx)
     implementation(libs.androidx.constraint)
     implementation(libs.androidx.appcompat)
-    implementation(libs.lib.sdk)
+    implementation(libs.lib.suma.document)
+    //implementation(libs.lib.sdk)
     //implementation(files("libs/vdid-debug.aar"))
     //implementation(files("libs/vdid_document-debug.aar"))
 }
